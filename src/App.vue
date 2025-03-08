@@ -1,20 +1,26 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <InstanceExample />
-    <BindingExample />
+    <nav>
+      <router-link to="/instance">Instance Example</router-link> |
+      <router-link to="/binding">Binding Example</router-link> |
+      <router-link to="/eventhandling">EventHandling Example</router-link>
+    </nav>
+    <router-view />
+    <!-- <InstanceExample />
+    <BindingExample /> -->
   </div>
 </template>
 
 <script>
-import InstanceExample from './components/InstanceExample.vue'
-import BindingExample from './components/BindingExample.vue'
+// import InstanceExample from './components/InstanceExample.vue'
+// import BindingExample from './components/BindingExample.vue'
 
 export default {
   name: 'App',
   components: {
-    InstanceExample,
-    BindingExample
+    // InstanceExample,
+    // BindingExample
   }
 }
 </script>
