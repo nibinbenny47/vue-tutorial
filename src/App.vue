@@ -9,20 +9,20 @@
       <router-link to="/watcherexample">Watcher Example</router-link> |
     </nav>
     <router-view />
-    <!-- <InstanceExample />
-    <BindingExample /> -->
+    <h3>Props Example</h3>
+     <PropsExample message="Hello from Parent!" />
+    
   </div>
 </template>
 
 <script>
-// import InstanceExample from './components/InstanceExample.vue'
-// import BindingExample from './components/BindingExample.vue'
+
+import PropsExample from './components/PropsExample.vue'
 
 export default {
   name: 'App',
   components: {
-    // InstanceExample,
-    // BindingExample
+    PropsExample
   }
 }
 </script>
