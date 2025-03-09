@@ -5,7 +5,8 @@
       <router-link to="/instance">Instance Example</router-link> |
       <router-link to="/binding">Binding Example</router-link> |
       <router-link to="/eventhandling">EventHandling Example</router-link> |
-      <router-link to="/computedexample">Computed Example</router-link>
+      <router-link to="/computedexample">Computed Example</router-link> |
+      <router-link to="/watcherexample">Watcher Example</router-link> |
     </nav>
     <router-view />
     <!-- <InstanceExample />
