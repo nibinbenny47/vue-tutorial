@@ -1,8 +1,9 @@
 <template>
   <div>
+    <h2>Computed Example</h2>
     <input type="text" v-model="firstName" placeholder="Enter First Name">
     <input type="text" v-model="lastName" placeholder="Enter Last Name">
-    <p>Full Name: {{ getFullName() }}</p>
+    <p>Full Name: {{ fullName }}</p>
   </div>
 </template>
 
@@ -14,10 +15,10 @@ export default {
       lastName: ''
     };
   },
-  methods: {
-    getFullName() {
-      console.log("Method executed"); // Runs on every render
-      return this.firstName + ' ' + this.lastName;
+  computed: {
+    fullName() {
+      console.log("Computed property executed"); // Runs only when firstName or lastName changes
+      return `${this.firstName} ${this.lastName}`.trim();
     }
   }
 };

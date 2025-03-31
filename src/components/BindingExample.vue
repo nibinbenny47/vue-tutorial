@@ -14,6 +14,13 @@
             <p v-if="name">Hello, {{ name }}!</p>
         </div>
 
+      <!-- v-bind Examples -->
+      <div>
+        <h4>v-bind Example</h4>
+        <!-- Binding the disabled attribute on a button dynamically -->
+        <button v-bind:disabled="isDisabled">Click Me</button>
+      </div>
+
       <!-- Conditional binding ------------------------------------------->
         <div>
             <h4>Conditional Data Binding Example</h4>
@@ -23,9 +30,11 @@
         <!-- List Rendering----------------------------------------------- -->
         <div>
             <h4>List Rendering Example</h4>
+            
             <li v-for="(fruit, index) in fruits" :key="index">
                 {{ index + 1 }}. {{ fruit }}
             </li>
+           
         </div>
 
         
@@ -38,7 +47,8 @@
       return {
         message: "Hello Vue.js!", 
         name: "",
-        showText: true,
+        showText: false,
+        isDisabled: false,
         fruits: ['Apple', 'Banana', 'Cherry']
       };
     },

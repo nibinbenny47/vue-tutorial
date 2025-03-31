@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Watcher Example - Counter</h2>
-    <p>Counter: {{ counter }}</p>
+    <p :class="{ active: isActive }">Counter: {{ counter }}</p>
     <button @click="counter++">Increase Counter</button>
   </div>
 </template>
@@ -10,7 +10,9 @@
 export default {
   data() {
     return {
-      counter: 0
+      counter: 0,
+      isActive: true
+
     };
   },
   watch: {
